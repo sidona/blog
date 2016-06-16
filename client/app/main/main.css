@@ -1,0 +1,44 @@
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #4393B9;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.intro-header {
+  background-color: #808080;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 50px;
+}
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  padding: 100px 0 50px;
+  color: white;
+}
