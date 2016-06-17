@@ -1,0 +1,56 @@
+<div>
+  <header class="intro-header" style="background-image: url('assets/images/post-bg.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="post-heading">
+            <h1>{{$ctrl.detailThing.title}}</h1>
+
+            <span class="meta">Posted by <a href="#">{{$ctrl.detailThing.author}}</a> on{{$ctrl.detailThing.created_at |date :format:'medium'}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col-md-7 left-column">
+      <iframe ng-src="{{$ctrl.detailThing.video_online}}"></iframe>
+    </div>
+    <div class="col-md-5 right-column">
+      <p>About this project</p>
+      <p>{{$ctrl.detailThing.info}}</p>
+      <h3>Project Info</h3>
+      <div class="info-table">
+        <div class="info-row">
+          <div class="info-label">Type</div>
+          <div class="info">{{$ctrl.detailThing.project_info_type}}</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Difficulty</div>
+          <div class="info">{{$ctrl.detailThing.project_info_difficulty}}</div>
+        </div>
+
+      <div class="info-row">
+        <div class="info-label">Estimated time</div>
+        <div class="info">{{$ctrl.detailThing.project_info_estimated_time}}</div>
+      </div>
+        <div class="info-row">
+          <div class="info-label">Published</div>
+          <div class="info">{{$ctrl.detailThing.created_at}}</div>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <blockquote>Story</blockquote>
+        <p>{{$ctrl.detailThing.story}}</p>
+        </div>
+    </div>
+  </div>
+</article>
+</div>

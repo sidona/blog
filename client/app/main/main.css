@@ -42,3 +42,26 @@
   padding: 100px 0 50px;
   color: white;
 }
+.info-table {
+  font-size: 0.9em;
+  display: table;
+}
+.info-table .info-row {
+  display: table-row;
+}
+.info-table .info-label {
+  color: #888;
+  padding-right: 30px;
+  white-space: nowrap;
+}
+.info-table .info-label, .info-table .info {
+  display: table-cell;
+  padding-bottom: 6px;
+}
+.info-table .info {
+  color: #555;
+}
+.info-table .info-label, .info-table .info {
+  display: table-cell;
+  padding-bottom: 6px;
+}
