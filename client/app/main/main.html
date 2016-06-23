@@ -1,3 +1,4 @@
+
 <header class="intro-header" style="background-image: url('assets/images/home-bg.jpg')">
   <div class="container">
     <div class="row">
@@ -13,34 +14,27 @@
 </header>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="post-preview" ng-repeat="thing in $ctrl.awesomeThings">
-        <a href="post.html">
-          <h2 class="post-title">
-            <a ui-sref="detail({id:thing._id})">{{thing.title}}</a>
-          </h2>
-          <h3 class="post-subtitle">
-            {{thing.info}}
-          </h3>
-        </a>
-        <p class="post-meta">Posted by <a href="#">{{thing.author}}</a> on{{thing.created_at |date :format:'medium'}}</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-preview" ng-repeat="thing in $ctrl.awesomeThings">
+          <a href="post.html">
+            <h2 class="post-title">
+              <a ui-sref="detail({id:thing._id})">{{thing.title}}</a>
+            </h2>
+            <h3 class="post-subtitle">
+              {{thing.info}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by <a href="#">{{thing.author}}</a> on{{thing.created_at |date :format:'medium'}}</p>
+        </div>
+        <!--<h1 class="page-header">Features:</h1>-->
+        <!--<ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">-->
+          <!--<li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="$ctrl.deleteThing(thing)">&times;</button></a></li>-->
+        <!--</ul>-->
       </div>
-      <!--<h1 class="page-header">Features:</h1>-->
-      <!--<ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">-->
-        <!--<li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="$ctrl.deleteThing(thing)">&times;</button></a></li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
+    </div>
+  </div>
 
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
-</div>
+
+

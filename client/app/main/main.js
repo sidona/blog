@@ -8,7 +8,7 @@ angular.module('blogApp')
       template: '<main></main>'
     })
       .state('detail', {
-        url: '/main/:id',
+        url: '/:id',
         template: '<detail></detail>'
-      });
+      })
   });

@@ -19,6 +19,16 @@ Thing.find({}).remove()
       project_info_type: 'prototip',
       project_info_difficulty: 'Intermediate',
       project_info_estimated_time: '4 hours'
+    },{
+      title: ' Network',
+      info: 'Build a full IPv6 network using MOMOTE Hardware running ContikiOS.',
+      story: 'Contiki is open source software: Contiki can be freely used both in commercial and non-commercial systems and the full source code is available. Contiki provides powerful low-power Internet communication and supports fully standard IPv6 and IPv4, along with the recent low-power wireless standards: 6lowpan, RPL, CoAP. With Contikis ContikiMAC and sleepy routers, even wireless routers can be battery-operated.',
+      technology: 'java',
+      video_online: 'https://www.youtube.com/embed/Bb2Taj_VdTY',
+      author: 'ion',
+      project_info_type: 'pro',
+      project_info_difficulty: 'Intermediate',
+      project_info_estimated_time: '5 hours'
     });
   });
 

@@ -1,0 +1,38 @@
+<header class="intro-header" style="background-image: url('assets/images/home-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <hr class="small">
+          <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+      <form class="thing-form">
+        <label>Adaugare nou eveniment</label>
+        <p class="input-group">
+          <input type="text" class="form-control" placeholder="Add a title." ng-model="$ctrl.newTitle">
+          <input type="text" class="form-control" placeholder="Add information." ng-model="$ctrl.newInfo">
+          <input type="text" class="form-control" placeholder="Add story." ng-model="$ctrl.newStory">
+          <input type="text" class="form-control" placeholder="Add technology." ng-model="$ctrl.technology">
+          <input type="text" class="form-control" placeholder="Add video." ng-model="$ctrl.newVideo">
+          <input type="text" class="form-control" placeholder="Add project type." ng-model="$ctrl.newProjectType">
+          <input type="text" class="form-control" placeholder="Add project difficulty." ng-model="$ctrl.newProjectDifficulty">
+          <input type="text" class="form-control" placeholder="Add project estimated." ng-model="$ctrl.newProjectEstimatedTime">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New</button>
+      </span>
+        </p>
+      </form>
+    </div>
+  </div>
+
+</div>

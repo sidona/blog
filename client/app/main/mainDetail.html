@@ -14,8 +14,10 @@
   </header>
 
   <div class="row">
-    <div class="col-md-7 left-column">
-      <iframe ng-src="{{$ctrl.detailThing.video_online}}"></iframe>
+    <div class="col-md-6 left-column">
+      <div class="iframe-video">
+        <iframe width="80%" height="100%" ng-src="{{$ctrl.detailThing.video_online}}"></iframe>
+      </div>
     </div>
     <div class="col-md-5 right-column">
       <p>About this project</p>
@@ -31,26 +33,36 @@
           <div class="info">{{$ctrl.detailThing.project_info_difficulty}}</div>
         </div>
 
-      <div class="info-row">
-        <div class="info-label">Estimated time</div>
-        <div class="info">{{$ctrl.detailThing.project_info_estimated_time}}</div>
-      </div>
+        <div class="info-row">
+          <div class="info-label">Estimated time</div>
+          <div class="info">{{$ctrl.detailThing.project_info_estimated_time}}</div>
+        </div>
         <div class="info-row">
           <div class="info-label">Published</div>
           <div class="info">{{$ctrl.detailThing.created_at}}</div>
         </div>
-    </div>
-    </div>
+      </div>
     </div>
   </div>
+</div>
 <article>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <blockquote>Story</blockquote>
         <p>{{$ctrl.detailThing.story}}</p>
-        </div>
+      </div>
     </div>
   </div>
 </article>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <form class="add-comment">
+      <input type="text" class="form-control" placeholder="Add a comment" ng-model="$ctrl.newTitle">
+    </form>
+
+  </div>
 </div>
+
