@@ -81,6 +81,18 @@ export function create(req, res) {
     .catch(handleError(res));
 }
 
+export function createComment(req, res) {
+ var commentArr=[];
+  commentArr.push(req.body);
+  Thing.findOne({'_id':Object(req.params.id)},function (err,results) {
+    results.comments.push(req.body);
+    results.save(function (err) {
+      if(err)return handleError(err);
+      res.send(results)
+    })
+  })
+}
+
 // Updates an existing Thing in the DB
 export function update(req, res) {
   if (req.body._id) {

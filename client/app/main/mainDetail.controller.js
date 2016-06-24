@@ -7,10 +7,11 @@
 
   class MainDetailController {
 
-    constructor($http, $scope, socket,$stateParams) {
+    constructor($http, $scope, socket,$stateParams,Auth) {
       this.$http = $http;
       this.socket = socket;
       this.$stateParams=$stateParams;
+      this.Auth = Auth;
       this.detailThing = [];
 
       $scope.$on('$destroy', function() {
@@ -25,6 +26,17 @@
           console.log('detailThing',this.detailThing);
           this.socket.syncUpdates('thing', this.detailThing);
         });
+    }
+    addComment(){
+      if(this.newCommentContent && this.Auth.getCurrentUser().name){
+        this.$http.post('/api/things/'+this.$stateParams.id,{
+          content:this.newCommentContent,
+          author:this.Auth.getCurrentUser().name
+        })
+      }
+      this.newCommentContent='';
+      this.Auth.getCurrentUser().name=this.Auth.getCurrentUser().name;
+     
     }
 
 

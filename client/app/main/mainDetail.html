@@ -53,14 +53,29 @@
         <p>{{$ctrl.detailThing.story}}</p>
       </div>
     </div>
+    <p>Comentarii</p>
+    <div ng-repeat="post in $ctrl.detailThing.comments">
+      <ul>
+        <li>
+          user {{post.author}}<br/>
+          <strong>{{post.content}}</strong>
+        </li>
+      </ul>
+    </div>
   </div>
+  </div>
+
 </article>
+
 
 <div class="row">
   <div class="col-md-4"></div>
   <div class="col-md-4">
     <form class="add-comment">
-      <input type="text" class="form-control" placeholder="Add a comment" ng-model="$ctrl.newTitle">
+      <input type="text" class="form-control" placeholder="Add a comment" ng-model="$ctrl.newCommentContent">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addComment()">Add New</button>
+      </span>
     </form>
 
   </div>
