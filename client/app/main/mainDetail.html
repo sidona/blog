@@ -13,71 +13,83 @@
     </div>
   </header>
 
-  <div class="row">
-    <div class="col-md-6 left-column">
-      <div class="iframe-video">
-        <iframe width="80%" height="100%" ng-src="{{$ctrl.detailThing.video_online}}"></iframe>
-      </div>
-    </div>
-    <div class="col-md-5 right-column">
-      <p>About this project</p>
-      <p>{{$ctrl.detailThing.info}}</p>
-      <h3>Project Info</h3>
-      <div class="info-table">
-        <div class="info-row">
-          <div class="info-label">Type</div>
-          <div class="info">{{$ctrl.detailThing.project_info_type}}</div>
-        </div>
-        <div class="info-row">
-          <div class="info-label">Difficulty</div>
-          <div class="info">{{$ctrl.detailThing.project_info_difficulty}}</div>
-        </div>
-
-        <div class="info-row">
-          <div class="info-label">Estimated time</div>
-          <div class="info">{{$ctrl.detailThing.project_info_estimated_time}}</div>
-        </div>
-        <div class="info-row">
-          <div class="info-label">Published</div>
-          <div class="info">{{$ctrl.detailThing.created_at}}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<article>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <blockquote>Story</blockquote>
-        <p>{{$ctrl.detailThing.story}}</p>
+      <div class="col-md-6 left-column">
+        <div class="iframe-video">
+          <iframe width="80%" height="100%" ng-src="{{$ctrl.detailThing.video_online}}"></iframe>
+        </div>
+      </div>
+      <div class="col-md-5 right-column">
+        <p>Despre conferinta</p>
+        <p>{{$ctrl.detailThing.info}}</p>
+        <h3>Detalii: </h3>
+        <div class="info-table">
+          <div class="info-row">
+            <div class="info-label">Tip conferinta</div>
+            <div class="info">{{$ctrl.detailThing.project_info_type}}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Didficultate</div>
+            <div class="info">{{$ctrl.detailThing.project_info_difficulty}}</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">Durata conferintei</div>
+            <div class="info">{{$ctrl.detailThing.project_info_estimated_time}}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Data adaugarii</div>
+            <div class="info">{{$ctrl.detailThing.created_at}}</div>
+          </div>
+        </div>
       </div>
     </div>
-    <p>Comentarii</p>
-    <div ng-repeat="post in $ctrl.detailThing.comments">
-      <ul>
-        <li>
-          user {{post.author}}<br/>
-          <strong>{{post.content}}</strong>
-        </li>
-      </ul>
+  </div>
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <blockquote>Detalii</blockquote>
+          <p>{{$ctrl.detailThing.story}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Comentarii</div>
+            <div class="panel-body" ng-repeat="post in $ctrl.detailThing.comments">
+              <ul>
+                <li>
+                  <strong>{{post.content}}</strong><br/>
+                  Adugat de {{post.author}}<br/>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
     </div>
-  </div>
-  </div>
+</div>
 
 </article>
 
-
-<div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4">
-    <form class="add-comment">
-      <input type="text" class="form-control" placeholder="Add a comment" ng-model="$ctrl.newCommentContent">
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+      <form class="add-comment">
+        <input type="text" class="form-control" placeholder="Adaugare comentariu" ng-model="$ctrl.newCommentContent">
       <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addComment()">Add New</button>
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addComment()">Adaugare</button>
       </span>
-    </form>
-
+      </form>
+    </div>
   </div>
+</div>
+
+
 </div>
 

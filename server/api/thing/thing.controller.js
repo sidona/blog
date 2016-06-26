@@ -76,6 +76,7 @@ export function show(req, res) {
 
 // Creates a new Thing in the DB
 export function create(req, res) {
+  req.body.created_at = Date.now();
   return Thing.create(req.body)
     .then(respondWithResult(res, 201))
     .catch(handleError(res));
@@ -83,6 +84,7 @@ export function create(req, res) {
 
 export function createComment(req, res) {
  var commentArr=[];
+  req.body.created_at = Date.now();
   commentArr.push(req.body);
   Thing.findOne({'_id':Object(req.params.id)},function (err,results) {
     results.comments.push(req.body);

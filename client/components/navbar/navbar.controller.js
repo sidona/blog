@@ -2,10 +2,6 @@
 
 class NavbarController {
   //end-non-standard
-  menu = [{
-    'title': 'add',
-    'state': 'add'
-  }];
 
   //start-non-standard
   constructor(Auth) {
